@@ -1,15 +1,40 @@
-# Proyek 1 - Manajemen Basis Data
+# UTS MBD - Proyek 1 (Dockerized PostgreSQL & pgAdmin4)
 
-Repositori ini berisi berkas konfigurasi Docker Compose dan skrip SQL untuk Ujian Tengah Semester (Proyek 1) Mata Kuliah Manajemen Basis Data.
+Repositori ini dibuat untuk memenuhi tugas **Proyek 1 / UTS Mata Kuliah Manajemen Basis Data**. Project ini mengimplementasikan kontainerisasi PostgreSQL & pgAdmin4 menggunakan Docker Compose, konfigurasi schema & constraints, serta Role-Based Access Control (RBAC).
 
-## Fitur & Layanan Container
-- **PostgreSQL**: PostgreSQL v15 Containerized
-- **pgAdmin4**: Web UI Manajemen Database Containerized
-- **Schema & Constraints**: Schema `SALAM` dengan tabel `mahasiswas` (PK, Unique, Check Constraints)
-- **Role-Based Access Control (RBAC)**: Konfigurasi user `backend_dev`, `bi_dev`, dan `data_engineer`
+---
 
-## Cara Menjalankan
-1. Pastikan Docker Desktop berjalan.
-2. Jalankan perintah berikut di terminal:
+## 👤 Identitas
+- **Nama:** Rafly Ahmad Muzaki
+- **NIM:** [Isi NIM Lo]
+- **Kelas:** Informatika - V/[Isi Kelas Lo]
+
+---
+
+## ⚙️ Environment & Services
+Konfigurasi menggunakan `.env` untuk menyembunyikan credential:
+- **PostgreSQL 15 (Alpine):** Container `postgres_Rafly`, External Port `22XXX`
+- **pgAdmin4:** Container `pgadmin_Rafly`, External Port `44XXX`
+
+---
+
+## 🗄️ Database Setup (`init.sql`)
+
+1. **Schema & Table (`SALAM.mahasiswas`)**
+   - Primary Key: `id`
+   - Unique Constraints: `nim`, `email`
+   - Check Constraint: `ipk` (range `0.00` - `4.00`)
+
+2. **Role-Based Access Control (RBAC)**
+   - `bi_dev`: Hak akses `SELECT` pada schema `SALAM`.
+   - `backend_dev`: Hak akses `CRUD` (Select, Insert, Update, Delete) + Sequence usage.
+   - `data_engineer`: Full DDL & DML (Create, Modify, Drop, CRUD).
+
+---
+
+## 🚀 Quick Start
+
+1. Copy `.env.example` ke `.env` (atau atur nilai variabel port/password).
+2. Jalankan container:
    ```bash
    docker compose up -d
