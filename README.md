@@ -4,21 +4,21 @@ Repositori ini dibuat untuk memenuhi tugas **Proyek 1 / UTS Mata Kuliah Manajeme
 
 ---
 
-## 👤 Identitas
+## Identitas
 - **Nama:** Rafly Ahmad Muzaki
 - **NIM:** 1247050019
-- **Kelas:** Informatika - V/C
+- **Kelas:** Informatika - C
 
 ---
 
-## ⚙️ Environment & Services
+## Environment & Services
 Konfigurasi menggunakan `.env` untuk menyembunyikan credential:
 - **PostgreSQL 15 (Alpine):** Container `postgres_Rafly`, External Port `22019`
 - **pgAdmin4:** Container `pgadmin_Rafly`, External Port `44019`
 
 ---
 
-## 🗄️ Database Setup (`init.sql`)
+## Database Setup (`init.sql`)
 
 1. **Schema & Table (`SALAM.mahasiswas`)**
    - Primary Key: `id`
@@ -32,7 +32,7 @@ Konfigurasi menggunakan `.env` untuk menyembunyikan credential:
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 1. Copy `.env.example` ke `.env` (atau atur nilai variabel port/password).
 2. Jalankan container:
