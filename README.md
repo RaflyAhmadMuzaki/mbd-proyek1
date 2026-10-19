@@ -6,15 +6,15 @@ Repositori ini dibuat untuk memenuhi tugas **Proyek 1 / UTS Mata Kuliah Manajeme
 
 ## 👤 Identitas
 - **Nama:** Rafly Ahmad Muzaki
-- **NIM:** [Isi NIM Lo]
-- **Kelas:** Informatika - V/[Isi Kelas Lo]
+- **NIM:** 1247050019
+- **Kelas:** Informatika - V/C
 
 ---
 
 ## ⚙️ Environment & Services
 Konfigurasi menggunakan `.env` untuk menyembunyikan credential:
-- **PostgreSQL 15 (Alpine):** Container `postgres_Rafly`, External Port `22XXX`
-- **pgAdmin4:** Container `pgadmin_Rafly`, External Port `44XXX`
+- **PostgreSQL 15 (Alpine):** Container `postgres_Rafly`, External Port `22019`
+- **pgAdmin4:** Container `pgadmin_Rafly`, External Port `44019`
 
 ---
 
